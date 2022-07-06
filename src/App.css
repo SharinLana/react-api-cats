@@ -1,38 +1,101 @@
+body {
+  background-color: #e9bcb7;
+}
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #e9bcb7;
+  background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+  min-height: 110vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  font-family: 'Gentium Plus', serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-image-container {
+  position: relative;
+  width: 400px;
+  height: 520px;
+}
+
+.App-mirror {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.App-reflection-container {
+  position: absolute;
+  width: 275px;
+  height: 355px;
+  overflow: hidden;
+  top: 96px;
+  left: 65px;
+  border-radius: 50%;
+}
+
+@keyframes gradient {
+    0% {background-position: 20% 100%;}
+    50% {background-position:  80% 0%;}
+    100% {background-position: 20% 100%;}
+}
+
+.App-reflection {
+  width:500px;
+  height: 500px;
+  position: absolute;
+  background: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 14%, #b8c6db 25%, #f5f7fa 34%, #b8c6db 45%, #f5f7fa 54%, #b8c6db 65%, #f5f7fa 74%);
+  animation: gradient 16s infinite linear;
+  background-size: 800%; 
+}
+
+.kitty {
+  position: absolute;
+  width: 275px;
+  height: 355px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.App-par, .App-advice {
+  font-family: 'Gentium Plus', serif;
+  font-weight: 400;
+  font-size: 20px;
+  width: 500px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.844);
+}
+
+.App-advice {
+  display: none;
+}
+
+.App-btn {
+  color: #3a372e;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: 'Gentium Plus', serif;
+  padding: 8px 20px;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}   
+
+.App-btn:hover {
+  transform: scale(1.04);
 }
