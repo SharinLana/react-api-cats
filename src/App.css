@@ -99,3 +99,86 @@ body {
 .App-btn:hover {
   transform: scale(1.04);
 }
+
+
+@media all and (max-width: 600px) {
+  .App-header {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .App-image-container {
+    width: 300px;
+    height: 420px;
+  }
+  
+  .App-mirror {
+    width: 300px;
+  }
+
+  .App-reflection-container {
+    width: 205px;
+    height: 270px;
+    top: 72px;
+    left: 50px;
+  }
+
+  .kitty {
+    width: 205px;
+    height: 270px;
+  }
+
+  .App-par, .App-advice {
+    width: 400px;
+  }
+  
+}
+
+@media all and (max-width: 400px) {
+  .App-header {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .App-par, .App-advice {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .App-header {
+    font-size: 25px;
+    width: 220px;
+  }
+
+  .App-image-container {
+    width: 230px;
+    height: 320px;
+  }
+  
+  .App-mirror {
+    width: 230px;
+  }
+
+  .App-reflection-container {
+    width: 160px;
+    height: 205px;
+    top: 55px;
+    left: 38px;
+  }
+
+  .kitty {
+    width: 160px;
+    height: 205px;
+  }
+
+  .App-par, .App-advice {
+    width: 230px;
+    font-size: 17px;
+  }
+
+  .App-btn {
+    font-size: 15px;
+  }   
+  
+}
